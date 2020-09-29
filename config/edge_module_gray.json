@@ -1,0 +1,64 @@
+{
+    "name": "non_local_resnet_dropout_gray",
+    "n_gpu": 4,
+    "module": "LearnEdgeNet",
+    "data_loader": {
+        "type": "TrainDataLoader",
+        "args": {
+            "data_dir": "data/grayscale/train",
+            "batch_size": 8,
+            "shuffle": true,
+            "validation_split": 0.0,
+            "num_workers": 8
+        }
+    },
+    "model": {
+        "type": "DefaultModel",
+        "args": {
+            "input_nc": 1,
+            "use_dropout": true,
+            "mode": "residual"
+        }
+    },
+    "loss": {
+        "type": "bce_with_logits",
+        "args": {
+        }
+    },
+    "metrics": [
+        "accuracy",
+        "precision",
+        "recall",
+        "f1_score"
+    ],
+    "optimizer": {
+        "type": "Adam",
+        "args": {
+            "lr": 0.0002,
+            "betas": [
+                0.5,
+                0.999
+            ],
+            "weight_decay": 0,
+            "amsgrad": true
+        }
+    },
+    "lr_scheduler": {
+        "type": "LambdaLR",
+        "args": {
+            "lr_lambda_tag": "grayscale"
+        }
+    },
+    "trainer": {
+        "type": "DefaultTrainer",
+        "args": {
+            "epochs": 300,
+            "save_dir": "saved",
+            "save_period": 10,
+            "verbosity": 2,
+            "monitor": "off",
+            "tensorboardX": true,
+            "log_dir": "saved/runs"
+        }
+    }
+}

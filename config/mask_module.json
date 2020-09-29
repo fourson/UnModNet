@@ -1,0 +1,63 @@
+{
+    "name": "se_attention_unet_dropout",
+    "n_gpu": 2,
+    "module": "LearnMaskNet",
+    "data_loader": {
+        "type": "TrainDataLoader",
+        "args": {
+            "data_dir": "data/train",
+            "batch_size": 4,
+            "shuffle": true,
+            "validation_split": 0.0,
+            "num_workers": 4
+        }
+    },
+    "model": {
+        "type": "DefaultModel",
+        "args": {
+            "input_nc": 3,
+            "use_dropout": true
+        }
+    },
+    "loss": {
+        "type": "bce_with_logits",
+        "args": {
+        }
+    },
+    "metrics": [
+        "accuracy",
+        "precision",
+        "recall",
+        "f1_score"
+    ],
+    "optimizer": {
+        "type": "Adam",
+        "args": {
+            "lr": 0.0001,
+            "betas": [
+                0.5,
+                0.999
+            ],
+            "weight_decay": 0,
+            "amsgrad": true
+        }
+    },
+    "lr_scheduler": {
+        "type": "LambdaLR",
+        "args": {
+            "lr_lambda_tag": "original"
+        }
+    },
+    "trainer": {
+        "type": "DefaultTrainer",
+        "args": {
+            "epochs": 400,
+            "save_dir": "saved",
+            "save_period": 20,
+            "verbosity": 2,
+            "monitor": "off",
+            "tensorboardX": true,
+            "log_dir": "saved/runs"
+        }
+    }
+}

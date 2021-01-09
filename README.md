@@ -28,6 +28,8 @@ python execute/infer_LearnMaskNet.py -r checkpoint/checkpoint-mask.pth --data_di
 python execute/infer_LearnMaskNet.py -r checkpoint/checkpoint-mask-gray.pth --data_dir <path_to_modulo_images> --result_dir <path_to_result> --resume_edge_module checkpoint/checkpoint-edge-gray.pth default
 ```
 
+* Use `TonemapReinhard_npy.py` to visualize the results. Note that the default tonemap method we use is `cv2.createTonemapReinhard(intensity=-1.0, light_adapt=0.8, color_adapt=0.0)`.
+
 ## Pre-trained models and test examples
 
 Coming soon.
@@ -54,6 +56,7 @@ Coming soon.
 ```
 
 ## Citation
+
 If you find this work helpful to your research, please cite:
 ```
 Coming soon.

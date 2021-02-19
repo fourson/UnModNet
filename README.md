@@ -1,4 +1,4 @@
-# UnModNet: Learning to Unwrap a Modulo Image for High Dynamic Range Imaging
+# [UnModNet: Learning to Unwrap a Modulo Image for High Dynamic Range Imaging](https://proceedings.neurips.cc/paper/2020/file/1102a326d5f7c9e04fc3c89d0ede88c9-Paper.pdf)
 
 By Chu Zhou, Hang Zhao, Jin Han, Chang Xu, Chao Xu, Tiejun Huang, [Boxin Shi](http://ci.idm.pku.edu.cn/)
 ![Network](Network.png)
@@ -32,7 +32,7 @@ python execute/infer_LearnMaskNet.py -r checkpoint/checkpoint-mask-gray.pth --da
 
 ## Pre-trained models and test examples
 
-Coming soon.
+https://drive.google.com/drive/folders/10Y8MOr2o2TZzTI5RZUQZQ-0RBezbzhIV?usp=sharing
 
 ## Training your own model
 
@@ -59,6 +59,15 @@ Coming soon.
 
 If you find this work helpful to your research, please cite:
 ```
-Coming soon.
+@inproceedings{NEURIPS2020_1102a326,
+ author = {Zhou, Chu and Zhao, Hang and Han, Jin and Xu, Chang and Xu, Chao and Huang, Tiejun and Shi, Boxin},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {H. Larochelle and M. Ranzato and R. Hadsell and M. F. Balcan and H. Lin},
+ pages = {1559--1570},
+ publisher = {Curran Associates, Inc.},
+ title = {UnModNet: Learning to Unwrap a Modulo Image for High Dynamic Range Imaging},
+ url = {https://proceedings.neurips.cc/paper/2020/file/1102a326d5f7c9e04fc3c89d0ede88c9-Paper.pdf},
+ volume = {33},
+ year = {2020}
+}
 ```
-

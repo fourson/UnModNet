@@ -1,7 +1,9 @@
-# [UnModNet: Learning to Unwrap a Modulo Image for High Dynamic Range Imaging](https://proceedings.neurips.cc/paper/2020/file/1102a326d5f7c9e04fc3c89d0ede88c9-Paper.pdf)
+# UnModNet: Learning to Unwrap a Modulo Image for High Dynamic Range Imaging
 
 By [Chu Zhou](https://fourson.github.io/), Hang Zhao, Jin Han, Chang Xu, Chao Xu, Tiejun Huang, [Boxin Shi](http://ci.idm.pku.edu.cn/)
 ![Network](Network.png)
+
+[PDF](https://proceedings.neurips.cc/paper/2020/file/1102a326d5f7c9e04fc3c89d0ede88c9-Paper.pdf) | [SUPP](https://proceedings.neurips.cc/paper/2020/file/1102a326d5f7c9e04fc3c89d0ede88c9-Supplemental.pdf)
 
 ## Abstract
 A conventional camera often suffers from over- or under-exposure when recording a real-world scene with a very high dynamic range (HDR). In contrast, a modulo camera with a Markov random field (MRF) based unwrapping algorithm can theoretically accomplish unbounded dynamic range but shows degenerate performances when there are modulus-intensity ambiguity, strong local contrast, and color misalignment. In this paper, we reformulate the modulo image unwrapping problem into a series of binary labeling problems and propose a modulo edge-aware model, named as UnModNet, to iteratively estimate the binary rollover masks of the modulo image for unwrapping. Experimental results show that our approach can generate 12-bit HDR images from 8-bit modulo images reliably, and runs much faster than the previous MRF-based algorithm thanks to the GPU acceleration.
